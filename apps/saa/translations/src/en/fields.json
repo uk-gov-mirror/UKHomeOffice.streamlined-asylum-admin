@@ -280,5 +280,9 @@
   },
   "helper-email-address": {
     "label": "Email address"
+  },
+   "correct-date-of-birth": {
+    "legend": "What is your correct date of birth?",
+    "hint": "For example, 27 3 2020"
   }
 }

@@ -132,5 +132,11 @@
   "helper-email-address": {
     "required": "You must enter your email address",
     "email": "Enter a valid email address"
+  },
+   "correct-date-of-birth": {
+    "required": "Enter a date of birth",
+    "date": "Date of birth must include a day, month and year",
+    "before": "Date of birth must be in the past",
+    "after": "Enter a date after 01 01 1900"
   }
 }
