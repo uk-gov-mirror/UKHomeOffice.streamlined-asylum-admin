@@ -432,6 +432,5 @@ module.exports = {
     validate: ['required', 'notUrl', { type: 'maxlength', arguments: 500 }],
     attributes: [{ attribute: 'rows', value: 5 }],
     isPageHeading: true
-    //labelClassName: 'govuk-label--s'
   }
 };
