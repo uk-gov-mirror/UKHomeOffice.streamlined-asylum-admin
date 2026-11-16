@@ -231,12 +231,12 @@ describe.each([false, true])('contact-detail routing (edit=%s)', edit => {
   test.each([
     [
       '/nationality-change',
-      { 'change-your-nationality': 'yes' },
+      { 'nationality-change': 'yes' },
       '/correct-nationality'
     ],
     [
       '/nationality-change',
-      { 'change-your-nationality': 'no' },
+      { 'nationality-change': 'no' },
       '/change-someone-else-nationality'
     ],
     ['/correct-nationality', {}, '/reason-nationality-change'],
@@ -330,7 +330,7 @@ describe.each([false, true])('contact-detail routing (edit=%s)', edit => {
     expect(post('/check-your-answers-someone-else-nationality', req, {}, true).url)
       .toBe(`${app.baseUrl}/new-email-address${suffix}`);
     expect(req.sessionModel.get(config.stateKey).completedSections).toEqual(['nationality']);
-    expect(req.sessionModel.get('change-your-nationality')).toBeUndefined();
+    expect(req.sessionModel.get('nationality-change')).toBeUndefined();
     expect(req.sessionModel.get('change-someone-else-nationality')).toBeUndefined();
 
     post('/new-email-address', req, {

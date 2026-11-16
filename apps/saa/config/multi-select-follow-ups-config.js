@@ -236,7 +236,7 @@ module.exports = {
           noChanges: {
             route: SOMEONE_ELSE_NATIONALITY_ROUTE,
             when: [
-              { field: 'change-your-nationality', value: 'no' },
+              { field: 'nationality-change', value: 'no' },
               { field: SOMEONE_ELSE_NATIONALITY_FIELD, value: 'no' }
             ],
             header: `${SAA_NO_CHANGES_HEADER}.nationality`
@@ -256,7 +256,9 @@ module.exports = {
           ],
           // Add the page fields and loop key as the nationality page stories are built.
           fieldsToUnset: [
-            'change-your-nationality',
+            'nationality-change',
+            "correct-nationality",
+            "reason-nationality-change",
             SOMEONE_ELSE_NATIONALITY_FIELD
           ]
         }
